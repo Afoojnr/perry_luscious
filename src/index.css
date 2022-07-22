@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=Sacramento:regular);
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One:regular);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+*,html,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins','Open Sans',sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.poiret{
+    font-family: 'Poiret One';
+}
+.sacramento {
+    font-family: 'Sacramento';
+}
+
+html,body{
+    scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
+
+.bg-perry-color{
+    /* --tw-bg-opacity: 1;
+    background-color: rgb(96 165 250 / var(--tw-bg-opacity)); */
+    background-color: rgb(23, 70, 210);
+}
+.text-perry-color {
+    /* --tw-bg-opacity: 1;
+    color: rgb(96 165 250 / var(--tw-bg-opacity)); */
+    color: rgb(23, 70, 210);
+}
+
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    
+}
+nav a.active{
+    color:rgb(23, 70, 210);
+    
+}
+
+.h-80vh{
+    height: 80vh
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
