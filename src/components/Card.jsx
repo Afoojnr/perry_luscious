@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Donot from '../img/donots.jpg'
 import { FaCartPlus, FaPlus } from "react-icons/fa";
 import { BsCartCheckFill } from "react-icons/bs";
 import { MdDone } from "react-icons/md";
@@ -9,7 +8,7 @@ import { BiX } from "react-icons/bi";
 const Card = ({ id, name, price, img, onAddtoCart, description }) => {
   const [productCard, setProductCard] = useState(false);
   const [addedTOCart, setAddedToCart] = useState(false);
-  // const onClickOnCart = () => {};
+ 
   return (
     <>
        {productCard && (

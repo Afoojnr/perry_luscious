@@ -11,7 +11,7 @@ const Footer = () => {
   const d = new Date();
   return (
     <>
-      <footer className=" flex flex-col r justify-center text-center bg-perry-color gap-4 text-white p-3">
+      <footer className=" flex flex-col r justify-center text-center bg-slate-600 gap-4 text-white p-3">
         <div className="flex justify-center ml-auto mr-auto gap-4 text-3xl">
           <a href="tel:+2349065736730" className="m-1">
             <AiFillPhone />

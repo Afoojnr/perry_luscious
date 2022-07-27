@@ -6,8 +6,6 @@ import Nav from "./components/Nav";
 import Menu from "./components/Menu";
 import Welcome from "./components/Welcome";
 import About from "./components/About";
-import Card from "./components/Card";
-import Banner from "./components/Banner";
 import Home from "./components/Home";
 import CartContainer from "./components/CartContainer";
 import NoMatch from "./components/NoMatch";
@@ -16,7 +14,7 @@ import Footer from "./components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useLocation } from "react-router-dom";
-// import CartContainer from "./components/CartContainer";
+
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -101,13 +99,9 @@ const App = () => {
     fetchMiniCakes();
     fetchCart();
   }, []);
-  console.log(products);
-  // console.log(cakes);
-  // console.log(cart);
-  // console.log(cart.line_items);
+  
   const location=useLocation()
-  //  const navref = useRef(null);
-  //  const scrollToElement = () => navref.current.scrollIntoView();
+  
   return (
     
     <div>
@@ -160,15 +154,7 @@ const App = () => {
         <Route path="*" element={<NoMatch />} />
       </Routes>
         {(location.pathname == '/' || location.pathname == '/about')&& < Footer/>}
-      {/* <Banner banner={banner} hotDeals ={hotDeals} onAddtoCart={handleCart}/> */}
-      {/* <About /> */}
-
-      {/* <CartContainer
-        cart={cart}
-        emptyCart={emptyCart}
-        updateQty={updateQty}
-        removeCartItem={removeCartItem}
-      /> */}
+      
     </div>
   );
 };

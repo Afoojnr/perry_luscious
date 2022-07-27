@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Logo from "../img/logo_blue.png";
+
 import { MdShoppingCart } from "react-icons/md";
-// import {HiUser} from 'react-icons/hi'
+
 import { BiMenu,BiX } from "react-icons/bi";
 import CartContainer from "./CartContainer";
 import { AnimatePresence, motion } from "framer-motion";
@@ -21,8 +21,7 @@ const [openNav, setOpenNav] = useState(false);
   return (
     <div className="sticky top-0 z-50">
       <nav className=" relative flex  justify-between px-2  py-1 w-full items-center ml-auto mr-auto bg-slate-100   shadow-md z-50 ">
-        {/* <div className='flex'> */}
-        {/* <img src={Logo} alt="logo" className="w-10 h-10 md:hidden" /> */}
+        
         {location.pathname !== "/cart" ? (<motion.div whileHover={{scale:1.1}} whileTap={{scale:0.75}} className="md:hidden text-4xl text-perry-color transition-all ease-in">
           {openNav ?<BiX onClick={()=>setOpenNav(false)}/>:<BiMenu onClick={()=>setOpenNav(true)} />}
         </motion.div>): (<div></div>)}
@@ -61,9 +60,7 @@ const [openNav, setOpenNav] = useState(false);
       </nav>
           {/* nav for mobile */}
     <motion.nav 
-    // initial={{ opacity: 0, y: -30 }}
-    // animate={{ opacity: 1, y: 0 }}
-    // exit={{ opacity: 0, y: -50 }}
+   
         
           animate={ openNav? "open": "closed"}
           variants={variants}

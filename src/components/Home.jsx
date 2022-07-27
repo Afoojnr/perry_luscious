@@ -1,5 +1,5 @@
 import React from "react";
-// import Welcome from './Welcome'
+
 import Banner from "./Banner";
 import About from "./About";
 

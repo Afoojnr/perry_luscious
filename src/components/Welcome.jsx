@@ -5,9 +5,7 @@ import Img2 from "../img/heritage-chocolate.jpg";
 import Img3 from "../img/white_cake.jpg";
 import Img4 from "../img/cupcakes.jpg";
 import Logo from "../img/logo_white.png";
-// import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { BiMenuAltRight } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -73,7 +71,7 @@ const Welcome = () => {
           >
             Your Taste Buds Deserve Quality
           </motion.span>
-          <motion.span initial={{opacity:0,y:"100%"}} animate={{opacity:1,y:0}} transition ={{type:"spring",stiffness:100,delay:1,duration:1}}>
+          <motion.span initial={{opacity:0,y:"100%"}} animate={{opacity:1,y:0}} transition ={{type:"spring",stiffness:100,delay:1,duration:2}}>
             <button
               className="poiret w-full p-1 text-sm text-white border cursor-pointer transition-all hover:transition-all hover:bg-white hover:bg-opacity-20 hover:font-extrabold font-semibold  md:w-1/2 "
               onClick={() => navigate("menu")}
@@ -82,16 +80,15 @@ const Welcome = () => {
             </button>
           </motion.span>
         </div>
-        {/* <BiMenuAltRight className="text-4xl absolute top-6  right-5 z-30 text-white cursor-pointer" /> */}
-        <img
+             <img
           src={Logo}
           alt="logo"
           className=" absolute top-5 left-5 w-12 h-12 z-30"
         />
         <div className="fullscreen-bg z-10"></div>
         <div
-          className="text-white text-3xl font-semibold animate-bounce hover:font-extrabold  hover:rounded-full hover:border transition-all z-30 absolute bottom-16 right-5 cursor-pointer   "
-          onClick={() =>  window.scrollBy(0, window.innerHeight)}
+          className="text-white cursor-pointer text-3xl font-semibold animate-bounce hover:font-extrabold  hover:rounded-full hover:border transition-all z-30 absolute bottom-16 right-5    "
+          onClick={() =>  window.scrollTo(0, window.innerHeight)}
         >
           <AiOutlineArrowDown />
         </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import { BiMinus, BiPlus, BiX } from "react-icons/bi";
-import { commerce, Commerce } from "../lib/commerce";
+
 
 const CartCard = ({ name, price, img, quantity,id,updateQty,
 removeCartItem }) => {
@@ -18,10 +18,10 @@ removeCartItem }) => {
           <p className="text-base text-gray-50">{name}</p>
           <p className="text-sm block text-gray-300 font-semibold">{price}</p>
         </div>
-        <div className="group flex  items-center gap-2 ml-auto cursor-pointer">
+        <div className="group flex  items-center gap-2 ml-auto ">
           <motion.div whileTap={{ scale: 0.75 }}>
             <BiMinus
-              className="text-gray-50"
+              className="text-gray-50 cursor-pointer"
               onClick={() => updateQty(id, quantity - 1)}
             />
           </motion.div>
@@ -30,14 +30,14 @@ removeCartItem }) => {
           </p>
           <motion.div whileTap={{ scale: 0.75 }}>
             <BiPlus
-              className="text-gray-50 text-xl"
+              className="text-gray-50 text-xl cursor-pointer"
               onClick={() => updateQty(id, quantity + 1)}
             />
           </motion.div>
         </div>
         <motion.div whileTap={{ scale: 0.75 }}>
           <BiX
-            className="text-gray-50 text-3xl"
+            className="text-gray-50 text-3xl cursor-pointer"
             onClick={() => removeCartItem(id)}
           />
         </motion.div>

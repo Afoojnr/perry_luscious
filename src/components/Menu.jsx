@@ -19,7 +19,7 @@ const Menu = ({
   const [searchTerm, setSearchTerm] = useState("");
   const [searchData, setSearchData] = useState([]);
   useEffect(() => {}, [active]);
-  // useEffect(searchResult(), [active,searchTerm]);
+  
 
   const MenuBars = ({ name }) => {
     const showMenu = () => {

@@ -80,10 +80,7 @@ removeCartItem }) => {
               <div className="flex flex-col md:flex-row w-full gap-1 md:w-1/2">
                 <a
                   href={checkOut
-                    // cart.hosted_checkout_url == undefined ||
-                    // cart.line_items.length == 0
-                    //   ? checkOut
-                    //   : cart.hosted_checkout_url
+                    
                   }
                   className="w-full"
                   onClick={() =>
@@ -96,7 +93,7 @@ removeCartItem }) => {
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.8 }}
-                    className="w-full   p-2 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-gray-50 text-lg my-2 hover:shadow-lg  "
+                    className="w-full   p-2 rounded-full bg-perry-color text-gray-50 text-lg my-2 hover:shadow-lg  "
                   >
                     Check out
                   </motion.button>
