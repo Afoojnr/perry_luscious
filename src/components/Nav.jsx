@@ -40,7 +40,7 @@ const [openNav, setOpenNav] = useState(false);
             <NavLink to="/about">ABOUT</NavLink>
           </li>
           <li className="text-base text-textColor cursor-pointer hover:text-headingColor">
-           <a href="https://wa.me/+2349030655243">CONTACT</a> 
+           <a href="https://wa.me/+2349030655243" target="blank">CONTACT</a> 
           </li>
         </ul>
         <div className="flex gap-4 text-base text-textColor">

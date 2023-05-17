@@ -15,7 +15,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useLocation } from "react-router-dom";
 
-
 const App = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -99,32 +98,21 @@ const App = () => {
     fetchMiniCakes();
     fetchCart();
   }, []);
-  
-  const location=useLocation()
-  
+
+  const location = useLocation();
+
   return (
-    
     <div>
-      {location.pathname == "/" && (
-        <Welcome  />
-      )}
-     { location.pathname!=="/cart"&&(<Nav 
-        cart={cart}
-        emptyCart={emptyCart}
-        updateQty={updateQty}
-        removeCartItem={removeCartItem}
-      />)}
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home 
-              banner={banner}
-              hotDeals={hotDeals}
-              onAddtoCart={handleCart}
-            />
-          }
+      {(location.pathname == "/menu" || location.pathname == "/about") && (
+        <Nav
+          cart={cart}
+          emptyCart={emptyCart}
+          updateQty={updateQty}
+          removeCartItem={removeCartItem}
         />
+      )}
+      <Routes>
+        <Route path="/" element={<Welcome />} />
         <Route
           path="menu"
           element={
@@ -153,8 +141,7 @@ const App = () => {
         />
         <Route path="*" element={<NoMatch />} />
       </Routes>
-        {(location.pathname == '/' || location.pathname == '/about')&& < Footer/>}
-      
+      {location.pathname == "/about" && <Footer />}
     </div>
   );
 };

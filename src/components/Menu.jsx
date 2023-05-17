@@ -27,10 +27,10 @@ const Menu = ({
       setSearchTerm("");
     };
     return (
-      <motion.span
-        initial={{ opacity: 0, x: "100%" }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
+      <span
+        // initial={{ opacity: 0, x: "100%" }}
+        // animate={{ opacity: 1, x: 0 }}
+        // transition={{ duration: 0.5 }}
         className={`rounded-xl ${
           active === name
             ? "bg-white text-perry-color border border-blue-200"
@@ -39,7 +39,7 @@ const Menu = ({
         onClick={() => showMenu()}
       >
         {name}
-      </motion.span>
+      </span>
     );
   };
 
@@ -86,14 +86,14 @@ const Menu = ({
   return (
     <>
       {/* <Nav /> */}
-      <motion.h1
-        initial={{ opacity: 0, y: "-100%" }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <h1
+        // initial={{ opacity: 0, y: "-100%" }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 0.5 }}
         className="text-center text-2xl poiret text-perry-color mt-8 font-semibold"
       >
         Welcome To Our Store
-      </motion.h1>
+      </h1>
       <div className=" flex  flex-wrap  justify-center  p-2  ">
         <MenuBars name={"All"} key={"all"} />
         {categories &&
@@ -103,10 +103,10 @@ const Menu = ({
               <MenuBars key={category.id} name={category.name} />
             ))}
       </div>
-      <motion.div
-        initial={{ opacity: 0, x: "-100%" }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+        // initial={{ opacity: 0, x: "-100%" }}
+        // animate={{ opacity: 1, x: 0 }}
+        // transition={{ duration: 0.5 }}
         className="flex justify-center border  border-slate-300 w-2/3 md:w-1/3 ml-auto mr-auto rounded p-1"
       >
         <input
@@ -122,7 +122,7 @@ const Menu = ({
           className="bg-white text-3xl border-r-0 rounded text-perry-color cursor-pointer"
           onClick={() => searchResult()}
         />
-      </motion.div>
+      </div>
       <div className="flex flex-wrap justify-center p-2 gap-3">
         {display
           ? display.map((product) => (
